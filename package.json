@@ -1,0 +1,50 @@
+{
+  "name": "digikraft-api",
+  "version": "1.0.0",
+  "description": "Digikraft RESTful API",
+  "main": "server.js",
+  "scripts": {
+    "build": "tsc",
+    "build-w": "tsc -w",
+    "dev": "ts-node-dev --respawn --transpile-only ./server.ts",
+    "migrate": "typeorm-ts-node-commonjs migration:run -d ./configuration/dataSource.ts",
+    "dev-w": "tsc && cd dist && node server.js",
+    "run": "cd dist && nodemon server",
+    "prod": "cd dist && forever start server.js"
+  },
+  "author": "Damith",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/axios": "^0.14.0",
+    "@types/chalk": "^2.2.0",
+    "@types/dotenv": "^8.2.0",
+    "@types/express": "^4.17.13",
+    "@types/moment": "^2.13.0",
+    "@types/morgan": "^1.9.3",
+    "@types/multer": "^1.4.7",
+    "@types/node": "^16.11.49",
+    "@types/node-cron": "^3.0.2",
+    "@types/uuid": "^8.3.4",
+    "ts-node": "^10.9.1",
+    "ts-node-dev": "^2.0.0",
+    "typescript": "^4.4.3"
+  },
+  "dependencies": {
+    "axios": "^0.21.4",
+    "body-parser": "^1.19.0",
+    "chalk": "^4.1.2",
+    "dotenv": "^16.0.1",
+    "express": "^4.17.1",
+    "express-async-handler": "^1.2.0",
+    "express-bearer-token": "^2.4.0",
+    "moment": "^2.29.4",
+    "mongoose": "^6.0.7",
+    "morgan": "^1.10.0",
+    "multer": "^1.4.3",
+    "mysql2": "^2.3.3",
+    "node-cron": "^3.0.2",
+    "reflect-metadata": "^0.1.13",
+    "typeorm": "^0.3.7",
+    "uuid": "^8.3.2"
+  }
+}
